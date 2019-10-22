@@ -1,0 +1,66 @@
+.header
+  .header__logo
+    グループを作成しました
+
+.contents
+  .contents__side
+    .contents__side__header
+      .contents__side__header__box
+        .contents__side__header__box__name
+          Takao
+        .contents__side__header__box__menu--edit
+          = fa_icon 'edit'  
+        .contents__side__header__box__menu--cog
+          = fa_icon 'cog'   
+          
+    .contents__side__groups
+      .contents__side__groups__group 
+        .contents__side__groups__group__name
+          takao
+        .contents__side__groups__group__messages
+          hukuhuku
+      .contents__side__groups__group 
+        .contents__side__groups__group__name
+          takao
+        .contents__side__groups__group__messages
+          hukuhuku    
+      
+          
+
+          
+
+  
+  .contents__main
+    .contents__main__header
+      .contents__main__header__box
+        .contents__side__header__box__name
+          test-groop
+        .contents__side__header__box__member
+          takao
+
+      .contents__main__header__lightbox
+        .contents__main__header__lightbox__editbtn
+          Edit
+    .contents__main__messages
+      .contents__main__messages__message
+        .contents__main__messages__message__upper
+          .contents__main__messages__message__upper__talker
+            test-user
+          .contents__main__messages__message__upper__date            
+            2019/10/21(Mon) 11:56:58
+        .contents__main__messages__message__text
+          テストです
+          
+    .contents__main__form
+      .contents__main__form__message
+        .contents__main__form__message__input
+          .contents__main__form__message__input__text
+            %input{type: "text", placeholder: "type a message"}
+          .contents__main__form__message__input__image
+            = fa_icon  'image'
+            %input{type: "file", id: "upload_chat", name: "file" ,style: "display:none"}
+        .contents__main__form__message__submit
+          send        
+          
+          
+      

@@ -1,0 +1,206 @@
+$bleuColor: #38aef0;
+
+.header {
+  color: white;
+  font-size: 1rem;
+  font-weight: lighter;
+  text-align: center;
+  width: 100vw;
+  &__logo {
+    background-color: $bleuColor;
+  }
+}
+
+
+
+.contents {
+    height: calc(100vh - 90px - 20px);
+    width: 100%;
+    margin: 0 ;
+    padding: 0 ;
+    background-color: #fafafa;
+    display: block;
+  &__side{
+     display: block;
+     background-color: #253141;
+     height: 100%;
+     width: 300px;
+     color: white;
+     float: left;
+
+     &__header {
+      background-color: #253141;
+      height: 100px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 20px;
+        &__box {         
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          font-weight: bold;
+          &__name {
+            margin: 0;
+            padding: 0;
+          }
+          &__menu {
+            display: flex;
+            &--edit {
+              margin-left: auto;
+            }
+            &--cog {
+              margin-left: 0.3rem
+            }
+          }
+        }
+    }
+
+     &__groups {
+        height: calc(100vh - 100px);
+        background-color: #2f3e51;
+        padding: 20px 20px 0;
+        overflow: scroll;
+        &__group {
+          margin-bottom: 40px;
+          &__name {
+            font-size: 15px;
+            margin-bottom: 5px;
+          }
+          &__messages {
+            font-size: 11px;
+          }
+      }
+    }
+   }
+  
+ 
+  &__main{
+    width: calc(100vw - 300px);
+    float: left;
+    position: relative;
+    background: #FFF;
+    &__header {
+      height: 100px;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: solid 1px #eee;
+      overflow: scroll;
+      &__box {
+        width: 140px;
+        margin-top: 35px;
+        &__name {
+          font-size: 20px;
+          color: #333;
+          margin-bottom: 15px;
+        }
+        &__member {
+          display: flex;
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+      &__lightbox {
+        color: $bleuColor;
+        &__editbtn {
+          height: 40px;
+          line-height: 40px;
+          padding: 0 20px;
+          margin-top: 30px;
+          border: solid 1px $bleuColor;
+          position: absolute;
+          right: 40px;
+        }
+      }
+    }
+    &__messages {
+      height: calc(100vh - 190px);
+      padding: 46px 40px;
+      background-color: #eee;
+      overflow: scroll;
+      &__message {
+        padding-bottom: 40px;
+        margin-bottom: 10px;
+        position: relative;
+        &__upper {
+          display: flex;
+          margin-bottom: 10px;
+          &__talker {
+            color: #434a54;
+            font-size: 16px;
+            font-weight: bold;
+          }
+          &__date {
+            color: #999999;
+            font-size: 12px;
+            margin-left: 10px;
+          }
+        }
+        &__text {
+          display: flex;
+          color: #434a54;
+          font-size: 14px;
+          margin-bottom: 10px;
+          
+        }
+      }
+    }
+    &__form {
+      height: 90px;
+      width: 100%;
+      padding: 20px 40px;
+      background-color: #ddd;
+      position: absolute;
+      bottom: 0;
+      
+      &__message {
+        background-color: #ddd;
+        display: flex;
+        border: none;
+        float: left;
+        height: 50px;
+        width: calc(100% - 150px);
+        position: absolute;
+        bottom: 20;
+        &__input {
+          background-color: #eee;
+          position: relative;
+          width: 100%;
+          &__text {
+            height: 50px;
+            width: 100%;
+            line-height: 50px;
+            padding: 0 40px 0 10px;
+            color: #434a54;
+            border-style: none;
+          }
+          &__image {
+            font-size: 1.3rem;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+          }
+        }
+        &__submit {
+          text-align:center;
+          line-height: 50px;
+          width: 100px;
+          height: 50px;
+          padding: 0 30px;
+          margin-left: 15px;
+          background-color: $bleuColor;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+

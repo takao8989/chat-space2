@@ -34,9 +34,11 @@
       padding: 20px 0 40px;
       &__name {
         font-size: $side_group_name;
+        color: aliceblue;
       }
       &__message {
         font-size: $side_group_message;
+        color: aliceblue;
         margin-top: 5px;
       }
     }

@@ -16,7 +16,7 @@
 
       .right-header
         .right-header__button
-          = link_to "Edit","/grpups/#{@group.id}/edit" 
+          = link_to "Edit", edit_group_path(@group)
     .messages
       .message
       = render @messages

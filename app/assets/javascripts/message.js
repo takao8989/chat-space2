@@ -21,7 +21,6 @@ $(function(){
      return html;
    } 
 
-  $(function(){
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -45,9 +44,7 @@ $(function(){
     });
     return false;
     });
-  });
   var reloadMessages = function() {
-    if (window.location.href.match(/\/groups\/\d+\/messages/)){
       last_message_id = $('.message:last').data('message-id');
       $.ajax({
         url: "api/messages",
@@ -67,6 +64,12 @@ $(function(){
         console.log('error');
       });
     };
-  };
-  setInterval(reloadMessages, 5000);
+
+    function judge(){
+      if(document.URL.match("messages")){
+        reloadMessages();
+    }
+  }
+  setInterval(judge, 5000);
 });
+

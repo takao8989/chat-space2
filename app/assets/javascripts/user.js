@@ -19,11 +19,11 @@ $(function(){
   }
   function addDeleteUser(name, id) {
     let html = `
-    <div class="ChatMember clearfix" id="${id}">
-      <p class="ChatMember__name">${name}</p>
-      <div class="ChatMember__remove ChatMember__button" data-user-id="${id}" data-user-name="${name}">削除</div>
+    <div class="chat-group-user clearfix" id="${id}">
+      <p class="chat-group-user__name">${name}</p>
+      <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
     </div>`;
-    $(".ChatMembers").append(html);
+    $(".js-add-user").append(html);
   }
   function addMember(userId) {
     let html = `<input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userId}" />`;
@@ -35,7 +35,7 @@ $(function(){
     $.ajax({
       type: "GET",
       url: "/users",
-      data: { keyworl: input },
+      data: { keyword: input },
       dataType: "json",
       processData: false,
       contentType: false
@@ -57,7 +57,7 @@ $(function(){
         alert("通信エラーです。ユーザーが表示できません。");
       });
   });
-  $(document).on("click", ".chat-group-form__action-btn", function() {
+  $(document).on("click", ".user-search-add", function() {
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
     $(this)

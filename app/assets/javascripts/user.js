@@ -37,8 +37,6 @@ $(function(){
       url: "/users",
       data: { keyword: input },
       dataType: "json",
-      processData: false,
-      contentType: false
     })
       .done(function(users) {
         $("#user-search-result").empty();
